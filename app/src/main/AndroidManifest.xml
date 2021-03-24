@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.whackamole10">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/angrymoleremovebg"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/angrymoleremovebg"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WhackAMole10">
+        <activity android:name=".OptionPage"></activity>
+        <activity android:name=".WmTitleScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HighScores" />
+        <activity android:name=".GameOver" />
+        <activity android:name=".Game" />
+    </application>
+
+</manifest>
