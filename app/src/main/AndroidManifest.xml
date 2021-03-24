@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/angrymoleremovebg"
         android:supportsRtl="true"
         android:theme="@style/Theme.WhackAMole10">
-        <activity android:name=".OptionPage"></activity>
+        <activity android:name=".Options"></activity>
         <activity android:name=".WmTitleScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

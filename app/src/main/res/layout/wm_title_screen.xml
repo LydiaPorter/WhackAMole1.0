@@ -25,14 +25,16 @@
         android:src="@drawable/angrymoleremovebg" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/startGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClick"
         android:text="Play" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/startOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClick"
         android:text="OPTIONS" />
 </LinearLayout>

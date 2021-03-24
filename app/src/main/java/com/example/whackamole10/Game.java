@@ -41,6 +41,12 @@ public class Game extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game);
 
+        Bundle bun = getIntent().getExtras();
+        playerName = bun.getString("name");
+        difficultyLevel = bun.getInt("difficulty");
+        numMoles = bun.getInt("numMoles");
+        duration = bun.getInt("duration");
+
         initButtons();
         setNewMole();
         setTimer(difficultyLevel * 1000); //start timer //milliseconds

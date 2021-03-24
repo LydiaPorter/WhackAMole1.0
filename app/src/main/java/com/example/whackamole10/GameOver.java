@@ -16,7 +16,7 @@ public class GameOver extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_over);
+        setContentView(R.layout.game_over);
         //get access to text views
         TextView message = (TextView)findViewById(R.id.tvMessage);
         TextView scoremes = (TextView)findViewById(R.id.tvGameOver);
