@@ -70,7 +70,7 @@ public class Options extends AppCompatActivity implements View.OnClickListener{
             difficulty = 1;
         }
 
-     // saveSettingsInIntent(difficulty, name, numMoles, duration, playIntent);
+     //   saveSettingsInIntent(difficulty, name, numMoles, duration, playIntent);
         saveSettingsInPrefs(difficulty, name, numMoles, duration);
 
         startActivity(playIntent);
@@ -78,10 +78,12 @@ public class Options extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void saveSettingsInPrefs(int difficulty, String name, int numMoles, int duration){
+        //save and update when you leave screen
         //get references to shared preferences for application
         SharedPreferences prefs = getSharedPreferences("WhackSettings",MODE_PRIVATE);
         //get an editor object that we cna use to write our option settings
         SharedPreferences.Editor editor = prefs.edit();
+        //we need an editor object to edit
 
         //save all option info to shared preferences area
         editor.putString("name",name);
@@ -101,6 +103,7 @@ public class Options extends AppCompatActivity implements View.OnClickListener{
     }
     private void loadSettings(){
         SharedPreferences prefs = getSharedPreferences("WhackSettings",MODE_PRIVATE); //get access to pref file
+        //private: can load but not edit it
         //get values from sharedpreferences
         String playerName = prefs.getString("name","Default"); //assign player name. assign to Default if empty.
         int difficultyLevel = prefs.getInt("difficulty",1);

@@ -3,6 +3,7 @@ package com.example.whackamole10;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -40,12 +41,21 @@ public class Game extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game);
-
+/*
         Bundle bun = getIntent().getExtras();
         playerName = bun.getString("name");
         difficultyLevel = bun.getInt("difficulty");
         numMoles = bun.getInt("numMoles");
         duration = bun.getInt("duration");
+*/
+///////////////////////////////////////////
+        SharedPreferences prefs = getSharedPreferences("WhackSettings",MODE_PRIVATE); //get access to pref file
+        //private: can load but not edit it
+        //get values from sharedpreferences
+        playerName = prefs.getString("name","Default"); //assign player name. assign to Default if empty.
+       difficultyLevel = prefs.getInt("difficulty",1);
+       numMoles = prefs.getInt("numMoles", 8);
+       duration = prefs.getInt("duration",20);
 
         initButtons();
         setNewMole();
