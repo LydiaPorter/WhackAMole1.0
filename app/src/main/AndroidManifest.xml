@@ -20,6 +20,10 @@
         <activity android:name=".HighScores" />
         <activity android:name=".GameOver" />
         <activity android:name=".Game" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

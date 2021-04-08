@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#83E187"
+    android:background_color="color/BLUE"
     android:orientation="vertical"
     tools:context=".WmTitleScreen">
 
@@ -12,8 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight=".5"
+        android:fontFamily="@font/bangers"
         android:gravity="center"
-        android:text="Whack A Mole" />
+        android:text="Whack A Mole"
+        android:textColor="#000000"
+        android:textSize="36sp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -21,20 +26,27 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:contentDescription="mole being hit with a hammer"
-        app:srcCompat="@drawable/angrymoleremovebg"
-        android:src="@drawable/angrymoleremovebg" />
+        android:fontFamily="@font/bangers"
+        android:src="@drawable/angrymoleremovebg"
+        app:srcCompat="@drawable/angrymoleremovebg" />
 
     <Button
         android:id="@+id/startGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bangers"
         android:onClick="onClick"
-        android:text="Play" />
+        android:text="Play"
+        android:textSize="24sp"
+        app:backgroundTint="#4CAF50" />
 
     <Button
         android:id="@+id/startOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bangers"
         android:onClick="onClick"
-        android:text="OPTIONS" />
+        android:text="OPTIONS"
+        android:textSize="24sp"
+        app:backgroundTint="#4CAF50" />
 </LinearLayout>

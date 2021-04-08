@@ -1,9 +1,13 @@
 package com.example.whackamole10;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +32,51 @@ public class HighScores extends AppCompatActivity implements View.OnClickListene
         playsScreenIntent = new Intent(this,Game.class);
 
         //load in all high scores and show them
-        loadHsIF();
+      //  loadHsIF();
+       // loadHsSD();
+
+        Boolean isSDPresent = android.os.Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
+
+        if (isSDPresent) {
+            loadHsSD();
+        }
+        else {
+            loadHsIF();
+        }
+    }
+
+
+       // public static boolean hasRealRemovableSdCard(Context context){
+        //    return ContextCompat.getExternalFilesDirs(context,null).length+=2; //checks if there is an SD card at all
+        //}
+        public static boolean externalMemoryAvailable (Activity context){
+            File[] storages = ContextCompat.getExternalFilesDirs(context, null);
+            if (storages.length > 1 && storages[0] != null && storages[1] != null)
+                return true;
+            else
+                return false;
+
+        }
+/*
+        phone_Has_SD_Card
+        */
+    private void loadHsSD(){ //for SD card
+        try{
+            //open sd directory on this device
+            File privateLocation = getExternalFilesDir(null);
+            //create or open HighScores.txt file from SD card
+            File myFile = new File(privateLocation,"HighScores.txt");
+            //create input stream that allows you to read from file
+            FileInputStream fis = openFileInput("HighScores.txt");
+            //read scores from FileInputStream
+            readScoresFIS(fis);
+        }
+        catch(Exception e){
+            CharSequence text = "The file could not be opened.\n"+e.toString();
+            int dur = Toast.LENGTH_LONG;
+            Toast message = Toast.makeText( this,text,dur);
+            message.show();
+        }
     }
 
     private void loadHsIF(){ //internal file
@@ -38,9 +86,8 @@ public class HighScores extends AppCompatActivity implements View.OnClickListene
        }
        //try this, but if it doesn't work, do the following. it prevents crashes.
        catch(Exception e){
-           CharSequence text = "The file could not be opened. "+e.toString();
+           CharSequence text = "The file could not be opened.\n"+e.toString();
            int dur = Toast.LENGTH_LONG;
-
            Toast message = Toast.makeText( this,text,dur);
            message.show();
         }
@@ -93,7 +140,7 @@ public class HighScores extends AppCompatActivity implements View.OnClickListene
             buffReader.close(); //don't forget to close!!!!!!
         }
         catch(Exception e){
-            CharSequence text = "There was an issue reading the file. "+e.toString();
+            CharSequence text = "There was an issue reading the file.\n"+e.toString();
             int dur = Toast.LENGTH_LONG;
 
             Toast message = Toast.makeText( this,text,dur);
