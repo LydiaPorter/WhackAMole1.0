@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/grasswbg"
-    android:background_
     android:orientation="vertical"
-    tools:context=".HighScores">
+    tools:context=".HighScores"
+    android:background="#86D9FF">
 
     <TextView
         android:id="@+id/hspagetext"
@@ -16,6 +15,7 @@
         android:layout_gravity="center"
         android:fontFamily="@font/bangers"
         android:text="High Scores Page"
+        android:textColor="#000000"
         android:textSize="24sp" />
 
     <LinearLayout
@@ -37,7 +37,8 @@
                 android:fontFamily="@font/bangers"
                 android:gravity="center"
                 android:text="Player Names"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textColor="#000000"/>
 
             <TextView
                 android:id="@+id/tvScoreLbl"
@@ -48,7 +49,8 @@
                 android:fontFamily="@font/bangers"
                 android:gravity="center"
                 android:text="Player Scores"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textColor="#000000"/>
         </LinearLayout>
 
         <LinearLayout
@@ -62,7 +64,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/bangers"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textColor="#000000"/>
 
             <TextView
                 android:id="@+id/tvScore"
@@ -70,7 +73,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/bangers"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textColor="#000000" />
         </LinearLayout>
     </LinearLayout>
 
@@ -93,5 +97,17 @@
         android:text="Quit"
         android:textSize="18sp"
         app:backgroundTint="#39A13E" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/grasswbg" />
+    </LinearLayout>
 
 </LinearLayout>

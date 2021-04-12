@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#83E187"
-    android:background_color="color/BLUE"
+    android:background="@drawable/meadowfence"
     android:orientation="vertical"
     tools:context=".WmTitleScreen">
 
@@ -16,19 +15,19 @@
         android:layout_weight=".5"
         android:fontFamily="@font/bangers"
         android:gravity="center"
-        android:text="Whack A Mole"
+        android:text="Whack-A-Mole"
         android:textColor="#000000"
         android:textSize="36sp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/titleMole"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_weight="1"
         android:contentDescription="mole being hit with a hammer"
-        android:fontFamily="@font/bangers"
         android:src="@drawable/angrymoleremovebg"
-        app:srcCompat="@drawable/angrymoleremovebg" />
+        android:layout_marginLeft="7dp" />
 
     <Button
         android:id="@+id/startGame"
@@ -37,8 +36,12 @@
         android:fontFamily="@font/bangers"
         android:onClick="onClick"
         android:text="Play"
+        android:textAlignment="center"
         android:textSize="24sp"
-        app:backgroundTint="#4CAF50" />
+        app:backgroundTint="#33AA38"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
 
     <Button
         android:id="@+id/startOptions"
@@ -47,6 +50,10 @@
         android:fontFamily="@font/bangers"
         android:onClick="onClick"
         android:text="OPTIONS"
+        android:textAlignment="center"
         android:textSize="24sp"
-        app:backgroundTint="#4CAF50" />
+        app:backgroundTint="#33AA38"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
 </LinearLayout>

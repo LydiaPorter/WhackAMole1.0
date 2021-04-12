@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgorund="blue"
+    android:background="#FF5FC6F4 "
     android:orientation="vertical"
     tools:context=".Options">
 
@@ -13,33 +15,38 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_weight="1"
-        android:text="Enter your name: " />
+        android:text="Enter your name: "
+        android:textColor="#000000"/>
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Choose the nubmer of moles: " />
+        android:text="Choose the number of moles: "
+        android:textColor="#000000"/>
 
     <Spinner
         android:id="@+id/spMoles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:textColor="#000000"/>
 
     <TextView
         android:id="@+id/text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Choose game difficulty: " />
+        android:text="Choose game difficulty: "
+        android:textColor="#000000"/>
 
 
     <RadioGroup
@@ -88,14 +95,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_weight="1"
-        android:text="Duration of game:" />
+        android:text="Duration of game:"
+        android:textColor="#000000"/>
 
     <SeekBar
         android:id="@+id/sbDuration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:max="60"
-        android:progress="10" />
+        android:progress="10"
+        android:textColor="#000000"/>
 
     <Button
         android:id="@+id/buttonPlay"
@@ -103,14 +112,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:onClick="onClick"
-        android:text="Play Game" />
-
-    <ImageView
-        android:id="@+id/grassImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_weight="2" />
+        android:text="Play Game"
+        app:backgroundTint="#33AA38 "
+        android:textColor="#000000"/>
 
 
 </LinearLayout>
