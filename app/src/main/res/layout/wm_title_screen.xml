@@ -5,55 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/meadowfence"
+    android:contentDescription="meadow with a fence"
     android:orientation="vertical"
     tools:context=".WmTitleScreen">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight=".5"
+        android:layout_height="80dp"
         android:fontFamily="@font/bangers"
         android:gravity="center"
         android:text="Whack-A-Mole"
         android:textColor="#000000"
-        android:textSize="36sp" />
+        android:textSize="50sp" />
 
     <ImageView
         android:id="@+id/titleMole"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="323dp"
+        android:layout_height="272dp"
         android:layout_gravity="center"
-        android:layout_weight="1"
+        android:layout_marginLeft="7dp"
         android:contentDescription="mole being hit with a hammer"
-        android:src="@drawable/angrymoleremovebg"
-        android:layout_marginLeft="7dp" />
+        android:src="@drawable/angrymoleremovebg" />
 
     <Button
         android:id="@+id/startGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/bangers"
         android:onClick="onClick"
         android:text="Play"
         android:textAlignment="center"
         android:textSize="24sp"
-        app:backgroundTint="#33AA38"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"/>
+        app:backgroundTint="#21A126" />
 
     <Button
         android:id="@+id/startOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/bangers"
-        android:onClick="onClick"
-        android:text="OPTIONS"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:backgroundTint="#33AA38"
+        android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/bangers"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="OPTIONS"
+        android:textSize="24sp"
+        app:backgroundTint="#21A126" />
+
 </LinearLayout>

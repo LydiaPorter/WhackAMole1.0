@@ -37,18 +37,18 @@
         android:onClick="onClick"
         android:text="Play Again"
         android:textSize="18sp"
-        app:backgroundTint="#4CAF50" />
+        app:backgroundTint=" #21A126" />
 
     <Button
         android:id="@+id/buttonScores"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:fontFamily="@font/bangers"
         android:onClick="onClick"
         android:text="View Scores"
         android:textSize="18sp"
-        app:backgroundTint="#4CAF50"
-        android:layout_gravity="bottom"/>
+        app:backgroundTint=" #21A126" />
 
 
 </LinearLayout>

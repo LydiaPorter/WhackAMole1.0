@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgorund="blue"
     android:background="#FF5FC6F4 "
     android:orientation="vertical"
     tools:context=".Options">
@@ -16,14 +15,17 @@
         android:layout_marginTop="20dp"
         android:layout_weight="1"
         android:text="Enter your name: "
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:fontFamily="@font/bangers"/>
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:fontFamily="@font/bangers"/>
+
 
     <TextView
         android:id="@+id/text2"
@@ -31,14 +33,16 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Choose the number of moles: "
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:fontFamily="@font/bangers"/>
 
     <Spinner
         android:id="@+id/spMoles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:fontFamily="@font/bangers"/>
 
     <TextView
         android:id="@+id/text3"
@@ -46,7 +50,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Choose game difficulty: "
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:fontFamily="@font/bangers"/>
 
 
     <RadioGroup
@@ -56,36 +61,29 @@
         android:layout_marginBottom="10dp"
         android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
-
             <RadioButton
                 android:id="@+id/rbEasy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:checked="true"
-                android:text="Easy" />
+                android:text="Easy"
+                android:fontFamily="@font/bangers"/>
 
             <RadioButton
                 android:id="@+id/rbMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Medium" />
+                android:text="Medium"
+                android:fontFamily="@font/bangers"/>
 
             <RadioButton
                 android:id="@+id/rbHard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Hard" />
-        </LinearLayout>
+                android:text="Hard"
+                android:fontFamily="@font/bangers"/>
 
     </RadioGroup>
 
@@ -96,7 +94,8 @@
         android:layout_marginTop="20dp"
         android:layout_weight="1"
         android:text="Duration of game:"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:fontFamily="@font/bangers"/>
 
     <SeekBar
         android:id="@+id/sbDuration"
@@ -104,17 +103,19 @@
         android:layout_height="wrap_content"
         android:max="60"
         android:progress="10"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:fontFamily="@font/bangers"/>
 
     <Button
         android:id="@+id/buttonPlay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/bangers"
         android:onClick="onClick"
         android:text="Play Game"
-        app:backgroundTint="#33AA38 "
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        app:backgroundTint=" #21A126" />
 
 
 </LinearLayout>

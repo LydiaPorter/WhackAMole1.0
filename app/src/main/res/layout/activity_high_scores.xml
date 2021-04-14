@@ -86,7 +86,7 @@
         android:onClick="onClick"
         android:text="Play Again"
         android:textSize="18sp"
-        app:backgroundTint="#39A13E" />
+        app:backgroundTint=" #21A126" />
 
     <Button
         android:id="@+id/quitbtn"
@@ -96,7 +96,7 @@
         android:onClick="onClick"
         android:text="Quit"
         android:textSize="18sp"
-        app:backgroundTint="#39A13E" />
+        app:backgroundTint=" #21A126" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -104,10 +104,11 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/grasswbg" />
+            android:src="@drawable/grasswbg"
+            android:contentDescription="grass"/>
     </LinearLayout>
 
 </LinearLayout>

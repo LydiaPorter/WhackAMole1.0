@@ -32,17 +32,17 @@ public class HighScores extends AppCompatActivity implements View.OnClickListene
         playsScreenIntent = new Intent(this,Game.class);
 
         //load in all high scores and show them
-      //  loadHsIF();
-       // loadHsSD();
+//        loadHsIF();
+        loadHsSD();
 
-        Boolean isSDPresent = android.os.Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
-
-        if (isSDPresent) {
-            loadHsSD();
-        }
-        else {
-            loadHsIF();
-        }
+//        Boolean isSDPresent = android.os.Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
+//
+//        if (isSDPresent) {
+//            loadHsSD();
+//        }
+//        else {
+//            loadHsIF();
+//        }
     }
 
 

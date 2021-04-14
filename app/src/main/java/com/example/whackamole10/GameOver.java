@@ -35,21 +35,21 @@ public class GameOver extends AppCompatActivity implements View.OnClickListener 
         gameScreenIntent = new Intent(this, Game.class);
         hsScreenIntent = new Intent(this, HighScores.class);
 
+        saveDataToIF();
 
-
-        Boolean isSDPresent = android.os.Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
-
-        if(isSDPresent){
-            //saveDataToSD();
-            saveDataToIF();
-        }
-        else{
-            //saveDataToIF();
-            saveDataToSD();
-        }
-        //saveDataToIF();
-      //  saveDataToSD();
-    }
+//       /* Boolean isSDPresent = android.os.Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
+//
+//        if(isSDPresent){
+//            //saveDataToSD();
+//            saveDataToIF();
+//        }
+//        else{
+//            //saveDataToIF();
+//            saveDataToSD();
+//        }
+//        //saveDataToIF();
+//      //  saveDataToSD();
+   }
 
 
     private void saveDataToSD(){
